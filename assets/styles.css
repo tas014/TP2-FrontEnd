@@ -1,0 +1,287 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------------------------------- RESET END ---------------------------------------------- */
+
+header {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    background-color: #0c0932;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    z-index: 1;
+    overflow:hidden;
+    box-shadow: 0px 5px 10px #0c0932;
+}
+
+button {
+    border-style: hidden;
+    background: none;
+    color: white;
+}
+
+button:not(.ignore):not(#new) {
+    font-size: 1.3em;
+    width: 34%;
+    padding:0% 0.5%;
+    height: 10vh;
+    transition: background-color 0.5s, color 0.5s ;
+    cursor: pointer;
+}
+
+button:not(.ignore):not(#new):hover {
+    background-color: white;
+    color: #0c0932;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.selected {
+    background-color: white;
+    color: #0c0932;
+}
+
+.contain {
+    width: 30vw;
+    height: 42vh;
+    color: black;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+ul div{
+    width: 50%;
+}
+
+h2{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+}
+
+li {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 3%;
+}
+
+.markerimage {
+    height: 15vh;
+    background-image: url('images/background.jpg');
+}
+
+ul button {
+    width: 80%;
+    background-color: green;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+ul button:hover {
+    background-color:whitesmoke;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------------------------------- Estilos de admin -----------------------------------------*/
+
+#admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#admin > div {
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 3%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 5%;
+}
+
+body {
+    background-color: #060417;
+}
+
+.adminItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    height: 15vh;
+    border-bottom-style:solid;
+    border-bottom-color: white;
+    border-bottom-width: 0.6px ;
+}
+
+.adminItem div {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit {
+    background-color: blueviolet;
+    padding: 5% 10%;
+}
+
+.edit:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: blueviolet;
+}
+
+.delete {
+    background-color: darkred;
+    padding: 5% 10%;
+}
+
+.delete:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: darkred;
+}
+
+#new {
+    background-color: #4f3ee3;
+    font-size: 1.2em;
+    padding: 1% 3%;
+    border-radius: 5px;
+}
+
+#new:hover {
+    background-color: whitesmoke;
+    color: #4f3ee3;
+    cursor: pointer;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    padding: 3% 5%;
+    width: 40%;
+}
+
+form div{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    height: 3vh;
+    width: 40%;
+    text-align: center;
+}
+
+label {
+    color: #292727cc;
+}
+
+form>input{
+    align-self: center;
+    height: 5vh;
+    background: none;
+    border-style: hidden;
+    background-color: blueviolet;
+    color: whitesmoke;
+}

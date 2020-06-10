@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <title>Admin Tab</title>
+</head>
+<body>
+
+    <div id="admin">
+        <div>
+            <h1>Administrador de datos</h1>
+            <button id="new">Agregar Nuevo</button>
+            <section class="content"></section>
+        </div>
+    </div>
+    <div id="formDiv" class="hidden">
+        <form action="PUT">
+            <div>
+                <label>Latitud</label>
+                <input type="text">  
+            </div>
+            <div>
+                <label>Longitud</label>
+                <input type="text">  
+            </div>
+            <div>
+                <label>Calidad de cielo</label>
+                <input type="text">  
+            </div>
+            <div>
+                <label>Comodidad</label>
+                <input type="text">
+                <input type="hidden">
+            </div>
+            <input id="form_submit" type="submit" value="Editar">
+        </form>
+        <div class="hidden" id="confirmdiv">
+            <div>
+                <h3 id="confirmer"></h3>
+                <button class="cancelButton ignore">Cancelar</button>
+                <button class="confirmButton ignore">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../utils/api.js"></script>
+    <script src="../assets/admin.js"></script>
+</body>
+</html>
